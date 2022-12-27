@@ -1,13 +1,13 @@
 import express, {Express} from "express";
 import cors from "cors";
-import fileSearchRoutes from "./routes/FileSearchRoutes";
+import fileRoutes from "./routes/FileRoutes";
 
 const app: Express = express();
 
 app.use(cors());
 app.use(express.json());
 
-app.use("/filesearch", fileSearchRoutes);
+app.use("/filesearch", fileRoutes);
 
 app.listen(3000, () => {
     console.log("running");
